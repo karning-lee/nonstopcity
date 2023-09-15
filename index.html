@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* body {
+        color: black;
+      } */
+      video {
+        width: 100vw;
+        top: 7vh;
+        position: absolute;
+        mix-blend-mode: multiply;
+        z-index:-3 ;
+      }
+
+      #map {
+        width: 97vw;
+        bottom:1vh;
+        left: 1.5vw;
+        position: absolute;
+        display: none;
+        mix-blend-mode: multiply;
+        z-index:-2 ;
+      }
+
+      /* svg{
+       border: 1px solid red; 
+       width: 98vw;
+       bottom:0;
+       position: absolute;     
+      }
+
+      line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        fill: none;
+        animation: dash 2s linear infinite;
+      }
+
+      @keyframes dash {
+        to {
+          stroke-dashoffset: 0;
+        }
+      } */
+
+    </style>
+</head>
+
+<body>
+
+<button onclick="playVid()" type="button">Play Video</button>
+<button onclick="pauseVid()" type="button">Pause Video</button><br> 
+
+
+<video id="Video" loop >
+<source src="assets/img/chain.webm" type="video/webm">
+<source src="assets/img/chain.mp4" type="video/mp4">
+</video>
+
+<button onclick="imgtoggle()" class="three">
+ toggle
+</button>
+
+<img id="map" src="assets/img/residential_district2.png" alt="">
+
+<!-- <img class="map" src="assets/img/residential_district.png" alt=""> -->
+
+<!-- <img class="chain" src="assets/img/renders/chain_rig0000.png" alt=""> -->
+
+  <!-- <svg id="bed3b67e-3339-4e09-8b6a-b4624f39f6da" data-name="Layer 2 (1:1)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1187.64 1235.16">
+    <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="1184.94" y1="2.31" x2="596.8" y2="0.56"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="596.62" y1="0.5" x2="0.08" y2="2.31"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="596.74" y1="0.68" x2="0.08" y2="103.47"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.47" y1="2.07" x2="0.33" y2="112.49"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.55" y1="2.25" x2="213.91" y2="159.84"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="596.98" y1="3.34" x2="438.29" y2="159.76"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="456" y2="159.84"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="474.61" y2="159.72"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="471.22" y2="159.96"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="478.11" y2="159.96"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="492.61" y2="159.48"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="495.63" y2="159.96"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="501.67" y2="159.84"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="722.9" y2="159.56"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="731.76" y2="159.92"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="748.11" y2="159.96"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="751.98" y2="159.78"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="756.2" y2="159.96"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="766.71" y2="159.92"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="786.12" y2="159.68"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="976.11" y2="159.76"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="983.08" y2="159.72"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="1185.83" y2="157.91"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="1185.91" y2="155.49"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="597.99" y1="2.53" x2="1185.91" y2="152.43"/>
+  <line class="a36c7cbf-d60e-4ec4-8e72-c876833ea1a9" x1="608.04" y1="0.92" x2="1185.75" y2="149.69"/>
+  </svg> -->
+  
+
+
+<script src="assets/nostopcity.js""></script>
+</body>
+</html>

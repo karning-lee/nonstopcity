@@ -10,11 +10,12 @@
         color: black;
       } */
       video {
-        width: 100vw;
-        top: 7vh;
+        width: 97vw;
+        top: 1.5vh;
+        left: 0vw;
         position: absolute;
         mix-blend-mode: multiply;
-        z-index:-3 ;
+        z-index:-1 ;
       }
 
       #map {
@@ -23,8 +24,21 @@
         left: 1.5vw;
         position: absolute;
         display: none;
-        mix-blend-mode: multiply;
+        /* mix-blend-mode: multiply; */
         z-index:-2 ;
+      }
+
+      .direction{
+        top: 5vh;
+        font-size: 22px;
+        line-height: 22px;
+        font-kerning: -0.2px;
+        column-gap: 5px;
+        width: 95vw;
+        left: 3vw;
+        position:absolute;
+        column-count: 4;
+        z-index: -999;
       }
 
       /* svg{
@@ -54,19 +68,204 @@
 
 <body>
 
-<button onclick="playVid()" type="button">Play Video</button>
-<button onclick="pauseVid()" type="button">Pause Video</button><br> 
-
+<button onclick="playVid()" type="button">riding</button>
+<button onclick="pauseVid()" type="button">stop</button> 
+<button onclick="imgtoggle()" class="three">arrive</button>
 
 <video id="Video" loop >
-<source src="assets/img/chain.webm" type="video/webm">
-<source src="assets/img/chain.mp4" type="video/mp4">
+<source src="assets/img/chainmap.webm" type="video/webm">
+<source src="assets/img/chainmap.mp4" type="video/mp4">
 </video>
 
-<button onclick="imgtoggle()" class="three">
- toggle
-</button>
+<div class="direction">
+Yale School of Art<br>
+1156 Chapel St, New Haven, CT 06511<br>
+<br>
+Head west on Chapel St toward Park St<br>
+210 ft<br>
 
+Turn left onto Park St<br>
+0.1 mi<br>
+
+Turn left onto George St<br>
+0.4 mi<br>
+
+Turn left onto Church St<br>
+0.2 mi<br>
+
+Turn right onto Chapel St<br>
+6 min (0.8 mi)
+<br><br>
+
+129 Church<br>
+123 Church St, New Haven, CT 06510<br>
+<br>
+Head southeast on Chapel St toward Orange St<br>
+0.2 mi<br>
+
+Turn left onto State St<br>
+0.6 mi
+<br><br>
+
+September in Bangkok<br>
+754 State St, New Haven, CT 06511<br>
+<br>
+Head northeast on State St toward Eld St<br>
+0.3 mi<br>
+
+Turn right onto Humphrey St<br>
+0.2 mi<br>
+
+Turn right onto Mill River St/Walnut St<br>
+0.1 mi<br>
+
+Turn left onto East St<br>
+0.5 mi<br>
+
+Turn left onto Ives Pl<br>
+469 ft<br>
+<br>
+New Haven County<br>
+Connecticut<br>
+<br>
+Head west on Ives Pl toward East St<br>
+469 ft<br>
+
+Turn left onto East St<br>
+0.1 mi<br>
+
+Turn left onto Chapel St<br>
+0.4 mi<br>
+
+Turn left onto James St<br>
+0.3 mi<br>
+
+Turn right onto Grand Ave<br>
+0.5 mi<br>
+
+Turn left onto Bright St<br>
+0.2 mi<br>
+
+Turn right onto Pine St<br>
+256 ft<br><br>
+
+
+
+Fair Haven<br>
+New Haven, CT<br>
+<br>
+Head east on Pine St toward Atwater St<br>
+0.1 mi<br>
+
+Turn right onto Clinton Ave<br>
+0.2 mi<br>
+
+Turn left onto Grand Ave<br>
+0.4 mi<br>
+
+Turn right onto Lexington Ave<br>
+0.3 mi<br>
+
+Turn left onto Rock Hill Rd<br>
+440 ft<br><br>
+
+Fair Haven Heights<br>
+New Haven, CT<br>
+<br>
+Head northwest on Rock Hill Rd toward Lexington Ave<br>
+440 ft<br>
+
+Turn left onto Lexington Ave<br>
+66 ft<br>
+
+Turn right onto Oxford St<br>
+417 ft<br>
+
+Turn left onto Lenox St<br>
+0.3 mi<br>
+
+Turn left onto Quinnipiac Ave<br>
+0.2 mi<br>
+
+Continue onto Fulton St<br>
+476 ft<br>
+
+Turn left onto Farren Ave<br>
+0.2 mi<br>
+
+Slight left onto Fairmont Ave<br>
+463 ft<br><br>
+
+Fairmont Ave and Quinnipiac Ave<br>
+New Haven, CT<br>
+<br>
+Head north on Fairmont Ave toward Farren Ave<br>
+0.1 mi<br>
+
+Turn left onto Chamberlain St<br>
+0.2 mi<br>
+
+Turn right onto Forbes Ave<br>
+0.8 mi<br>
+
+Continue onto Water St<br>
+0.1 mi<br>
+
+Turn left onto East St<br>
+335 ft<br>
+
+Turn right<br>
+220 ft<br>
+
+Turn left<br>
+292 ft<br><br>
+
+Long Wharf<br>
+New Haven, CT<br>
+<br>
+Head north toward Hamilton St<br>
+292 ft<br>
+
+Turn left toward Hamilton St<br>
+463 ft<br>
+
+Turn right onto Hamilton St<br>
+335 ft<br>
+
+Turn left onto Water St<br>
+0.6 mi<br>
+
+Turn left onto Union Ave<br>
+0.6 mi<br>
+
+Continue onto Spring St<br>
+338 ft<br>
+
+Turn right onto Cedar St<br>
+315 ft<br><br>
+
+130 Cedar St<br>
+New Haven, CT 06519<br>
+<br>
+Head north on Cedar St toward Putnam St<br>
+174 ft<br>
+
+Turn left onto Putnam St<br>
+0.1 mi<br>
+
+Turn right onto Howard Ave<br>
+0.6 mi<br>
+
+Turn right onto York St<br>
+0.4 mi<br>
+
+Turn left onto Chapel St<br>
+Destination will be on the left<br>
+325 ft<br><br>
+Green Hall<br>
+1156 Chapel St, New Haven, CT 06511<br>
+
+</div>
 <img id="map" src="assets/img/residential_district2.png" alt="">
 
 <!-- <img class="map" src="assets/img/residential_district.png" alt=""> -->
